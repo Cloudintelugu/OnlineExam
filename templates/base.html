@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}AWS Cloud Practitioner Exam{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Header -->
+  <header>
+    <h1>AWS Cloud Practitioner Exam</h1>
+    <nav>
+        <a href="/">LogOut</a>
+    </nav>
+</header>
+
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 AWS Cloud Practitioner Exam</p>
+    </footer>
+</body>
+</html>

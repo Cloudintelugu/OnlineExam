@@ -1,0 +1,339 @@
+/* General Body Styling */
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f8fc;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Results Container Styling */
+.results-container {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    width: 90%;
+    text-align: left;
+}
+
+/* Header and Score Styling */
+.results-container h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.results-container .thank-you {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.results-container .score {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Table Styling */
+.table-wrapper {
+    overflow-x: auto; /* Ensures responsiveness for smaller screens */
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+thead {
+    background-color: #007bff;
+    color: white;
+}
+
+thead th {
+    padding: 12px;
+    font-size: 16px;
+    text-align: left;
+}
+
+tbody td {
+    padding: 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+    background-color: #f4f8fc;
+}
+
+tbody .correct {
+    color: green;
+    font-weight: bold;
+}
+
+tbody .incorrect {
+    color: red;
+    font-weight: bold;
+}
+
+/* Retry Link Styling */
+.retry-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.retry-link:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky; /* Ensures it sticks at the top while scrolling */
+    top: 0;
+    z-index: 10;
+}
+
+/* Title Styling in Header */
+header h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    color: white; /* Ensure it's visible */
+}
+
+/* Navigation Styling */
+header nav {
+    display: flex;
+    gap: 15px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Styling */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px);
+    padding: 20px;
+}
+
+/* Title Styling */
+h1 {
+    color: #007bff;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Question Container */
+.question-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.question-container:hover {
+    
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.question-container p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.question-container label {
+    display: block;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Button Styling */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Login Page Styling */
+.login-container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Old code removed */
+.login-container:hover {
+    
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.login-container h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+}
+
+/* Footer Styling */
+footer {
+    background-color: #f4f8fc;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+    font-size: 14px;
+    color: #555;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Sign-Up Link Styling */
+.signup-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.signup-link a {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .question-container {
+        padding: 20px;
+    }
+
+    .question-container p {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .login-container {
+        padding: 20px;
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .question-container {
+        padding: 20px;
+    }
+
+    .question-container p {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}

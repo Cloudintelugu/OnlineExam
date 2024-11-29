@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form method="POST" action="/submit" id="examForm">
+    <div id="questions">
+        {% for question in questions %}
+        <div class="question-container" id="question-{{ loop.index0 }}" {% if not loop.first %}style="display: none;"{% endif %}>
+            <p><strong>Question {{ loop.index }}:</strong> {{ question.question }}</p>
+            <label>
+                <input type="radio" name="q{{ question.id }}" value="A"> A. {{ question.option_a }}
+            </label>
+            <label>
+                <input type="radio" name="q{{ question.id }}" value="B"> B. {{ question.option_b }}
+            </label>
+            <label>
+                <input type="radio" name="q{{ question.id }}" value="C"> C. {{ question.option_c }}
+            </label>
+            <label>
+                <input type="radio" name="q{{ question.id }}" value="D"> D. {{ question.option_d }}
+            </label>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div style="text-align: center;">
+        <button type="button" id="prevBtn">Previous</button>
+        <button type="button" id="nextBtn">Next</button>
+        <button type="submit" id="submitBtn" style="display: none;">Submit</button>
+    </div>
+</form>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        let currentQuestionIndex = 0;
+        const questions = document.querySelectorAll('.question-container');
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const submitBtn = document.getElementById('submitBtn');
+
+        // Update button visibility based on the current question
+        function updateButtonVisibility() {
+            prevBtn.style.display = currentQuestionIndex === 0 ? 'none' : 'inline-block';
+            nextBtn.style.display = currentQuestionIndex === questions.length - 1 ? 'none' : 'inline-block';
+            submitBtn.style.display = currentQuestionIndex === questions.length - 1 ? 'inline-block' : 'none';
+        }
+
+        // Show the next question
+        function showNextQuestion() {
+            questions[currentQuestionIndex].style.display = 'none';
+            currentQuestionIndex++;
+            questions[currentQuestionIndex].style.display = 'block';
+            updateButtonVisibility();
+        }
+
+        // Show the previous question
+        function showPrevQuestion() {
+            questions[currentQuestionIndex].style.display = 'none';
+            currentQuestionIndex--;
+            questions[currentQuestionIndex].style.display = 'block';
+            updateButtonVisibility();
+        }
+
+        // Add event listeners to the buttons
+        nextBtn.addEventListener('click', showNextQuestion);
+        prevBtn.addEventListener('click', showPrevQuestion);
+
+        // Initialize visibility
+        updateButtonVisibility();
+    });
+</script>
+{% endblock %}

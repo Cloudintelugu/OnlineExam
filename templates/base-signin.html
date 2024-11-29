@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My App{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header style="background-color: #007bff; color: white; padding: 10px 20px; text-align: center;">
+        <nav>
+            <a href="/" style="color: white; margin: 0 15px; text-decoration: none;">Home</a>           
+            <a href="/signup" style="color: white; margin: 0 15px; text-decoration: none;">Sign Up</a>
+        </nav>
+    </header>
+
+    <!-- Content -->
+    <main style="padding: 20px;">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer style="background-color: #f4f8fc; text-align: center; padding: 10px 0; margin-top: 20px; border-top: 1px solid #ccc;">
+        <p>© 2024 AWS Cloud Practitioner Exam</p>
+    </footer>
+</body>
+</html>
